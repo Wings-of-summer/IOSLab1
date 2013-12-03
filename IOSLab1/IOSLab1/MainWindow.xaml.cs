@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace IOSLab1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void createTest_Click(object sender, RoutedEventArgs e)
+        {
+            string name = testName.Text;
+            string description = testDescription.Text;
+
+            if (name.Equals(String.Empty) || description.Equals(String.Empty)) 
+            {
+                return;
+            }
+
+            SociologicalTest sociologicalTest = new SociologicalTest(name, description);
+            CreateTest createTestWindow = new CreateTest(sociologicalTest);
+            createTestWindow.ShowDialog();
         }
     }
 }

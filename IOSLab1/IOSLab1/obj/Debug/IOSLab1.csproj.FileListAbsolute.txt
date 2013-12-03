@@ -1,1 +1,15 @@
 C:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\bin\Debug\IOSLab1.exe.config
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.csprojResolveAssemblyReference.cache
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTest.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\MainWindow.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTest.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\MainWindow.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\App.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1_MarkupCompile.cache
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.g.resources
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.Properties.Resources.resources
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.csproj.GenerateResource.Cache
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\bin\Debug\IOSLab1.exe
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\bin\Debug\IOSLab1.pdb
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.exe
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.pdb

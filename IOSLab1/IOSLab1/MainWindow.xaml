@@ -5,16 +5,16 @@
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="717">
             <TabItem Header="Create test">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="WhiteSmoke">
                     <Label Content="Name" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
-                    <Label Content="Description" HorizontalAlignment="Left" Margin="25,65,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="46" Margin="100,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450"/>
-                    <Button Content="Create" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="75"/>
+                    <TextBox x:Name="testName" HorizontalAlignment="Left" Height="23" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="25,74,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="testDescription" HorizontalAlignment="Left" Height="46" Margin="100,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450"/>
+                    <Button x:Name="createTest" Content="Create" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="75" Background="Azure" Click="createTest_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="View tests">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="WhiteSmoke"/>
             </TabItem>
         </TabControl>
 

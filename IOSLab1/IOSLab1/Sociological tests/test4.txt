@@ -1,0 +1,10 @@
+number/4
+name/t
+description/t
+Questions:
+n/1
+q/q1
+a/1
+b/1
+Rules:
+if/a==1/then/true

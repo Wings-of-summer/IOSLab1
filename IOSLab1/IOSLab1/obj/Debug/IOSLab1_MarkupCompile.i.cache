@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\
+d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\
 IOSLab1
 none
 false
 DEBUG;TRACE
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\App.xaml
-4116820047
+d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\App.xaml
+4-937616075
 
-161932291200
+16-941635845
 12-1401562060
-CreateTest.xaml;MainWindow.xaml;RulesWindow.xaml;TestExecutionWindow.xaml;
+CreateTestWindow.xaml;MainWindow.xaml;RulesWindow.xaml;TestExecutionWindow.xaml;
 
 False
 

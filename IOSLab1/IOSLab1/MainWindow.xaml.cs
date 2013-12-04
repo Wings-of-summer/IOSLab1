@@ -47,7 +47,6 @@ namespace IOSLab1
             RestoreOriginalState();
 
             tests.Add(sociologicalTest);
-            testsComboBox.Items.Add(sociologicalTest.Name);
         }
 
         private void RestoreOriginalState()

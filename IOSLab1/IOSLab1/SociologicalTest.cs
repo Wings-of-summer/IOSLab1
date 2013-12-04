@@ -9,12 +9,26 @@ namespace IOSLab1
 {
     public class SociologicalTest
     {
+        public Dictionary<int, Question> Questions = new Dictionary<int, Question>();
         public FileInfo TestFile { get; set; }
         public string parentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + @"\Sociological tests\";
-        public Dictionary<int, Question> questions = null;
+        public List<Rule> rules = null;
+        public int Number { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public SociologicalTest(int number, string name, string description)
+        {
+            Number = number;
+            Name = name;
+            Description = description;
+        }
 
         public SociologicalTest(string name, string description) 
         {
+            Name = name;
+            Description = description;
+
             int testsNumber = 0;
 
             using (StreamReader numberStreamReader = new StreamReader(parentPath + @"testsNumber.txt"))
@@ -22,11 +36,13 @@ namespace IOSLab1
                 String number = numberStreamReader.ReadToEnd();
                 if (!number.Equals(String.Empty)) 
                 {
-                    testsNumber = Int32.Parse(number);
+                    Int32.TryParse(number, out testsNumber);
                 }
             }
 
             testsNumber++;
+
+            Number = testsNumber;
 
             TestFile = new FileInfo(parentPath + "test" + testsNumber.ToString() + ".txt");
 
@@ -39,28 +55,29 @@ namespace IOSLab1
             {
                 using (StreamWriter streamWriter = TestFile.CreateText())
                 {
-                    streamWriter.WriteLine(testsNumber.ToString());
-                    streamWriter.WriteLine(name);
-                    streamWriter.WriteLine(description);
+                    streamWriter.WriteLine("number/" + testsNumber.ToString());
+                    streamWriter.WriteLine("name/" + name);
+                    streamWriter.WriteLine("description/" + description);
                 }
             }
         }
 
-        public SociologicalTest(FileInfo testFile)
-        {
-            TestFile = testFile;
-        }
-
         public void AddQuestion(Question question) 
         {
-            if (questions == null) 
+            if (Questions.Count == 0) 
             {
-                questions = new Dictionary<int, Question>();
+                if (!TestFile.Exists)
+                {
+                    using (StreamWriter streamWriter = TestFile.AppendText())
+                    {
+                        streamWriter.WriteLine("Questions:");
+                    }
+                }
             }
 
-            if (!questions.ContainsKey(question.Number)) 
+            if (!Questions.ContainsKey(question.Number)) 
             {
-                questions.Add(question.Number, question);
+                Questions.Add(question.Number, question);
                 AddQuestionToFile(question);
             }
         }
@@ -71,11 +88,41 @@ namespace IOSLab1
             {
                 using (StreamWriter streamWriter = TestFile.AppendText())
                 {
-                    streamWriter.WriteLine("q/" + question.Number + "/" + question);
+                    streamWriter.WriteLine("n/" + question.Number);
+                    streamWriter.WriteLine("q/" + question.QuestionText);
                     foreach (var answer in question.Answers) 
                     {
                         streamWriter.WriteLine(answer.Key + "/" + answer.Value);
                     }
+                }
+            }
+        }
+
+        public void AddRule(Rule rule) 
+        {
+            if (rules == null) 
+            {
+                rules = new List<Rule>();
+                if (!TestFile.Exists)
+                {
+                    using (StreamWriter streamWriter = TestFile.AppendText())
+                    {
+                        streamWriter.WriteLine("Rules:");
+                    }
+                }
+            }
+
+            rules.Add(rule);
+            AddRuleToFile(rule);
+        }
+
+        private void AddRuleToFile(Rule rule) 
+        {
+            if (!TestFile.Exists)
+            {
+                using (StreamWriter streamWriter = TestFile.AppendText())
+                {
+                    streamWriter.WriteLine("if/" + rule.IfText + "/then/" + rule.ThenText);
                 }
             }
         }

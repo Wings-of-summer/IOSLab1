@@ -60,9 +60,12 @@ namespace IOSLab1
                 answers.Add("d", dAnswerTextBox.Text);
             }
 
-            test.AddQuestion(questionString, answers);
-
             questionsNumber++;
+
+            Question question = new Question(questionString, questionsNumber);
+            question.Answers = answers;
+
+            test.AddQuestion(question);
 
             questionsNumberLabel.Content = questionsNumber.ToString();
 
@@ -86,6 +89,28 @@ namespace IOSLab1
             dAnswerTextBox.IsEnabled = false;
 
             addD.IsEnabled = false;
+        }
+
+        private void specifyRules_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+
+            RulesWindow rulesWindow = new RulesWindow(test);
+            rulesWindow.ShowDialog();
+        }
+
+        private void addC_Click(object sender, RoutedEventArgs e)
+        {
+            addD.IsEnabled = true;
+            addC.IsEnabled = false;
+
+            cAnswerTextBox.IsEnabled = true;
+        }
+
+        private void addD_Click(object sender, RoutedEventArgs e)
+        {
+            addD.IsEnabled = false;
+            dAnswerTextBox.IsEnabled = true;
         }
     }
 }

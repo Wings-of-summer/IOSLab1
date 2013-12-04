@@ -21,8 +21,13 @@ namespace IOSLab1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<SociologicalTest> tests = new List<SociologicalTest>();
+        private SociologicalTest SelectedTest;
+
         public MainWindow()
         {
+            Parser parser = new Parser();
+            tests = parser.GetTests();
             InitializeComponent();
         }
 
@@ -39,6 +44,49 @@ namespace IOSLab1
             SociologicalTest sociologicalTest = new SociologicalTest(name, description);
             CreateTest createTestWindow = new CreateTest(sociologicalTest);
             createTestWindow.ShowDialog();
+            RestoreOriginalState();
+
+            tests.Add(sociologicalTest);
+            testsComboBox.Items.Add(sociologicalTest.Name);
+        }
+
+        private void RestoreOriginalState()
+        {
+            testName.Clear();
+            testDescription.Clear();
+        }
+
+        private void testsComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+
+            string value = comboBox.SelectedItem as string;
+
+            SelectedTest = tests.FirstOrDefault(t => t.Name.Equals(value));
+            descriptionLabel.Content = SelectedTest.Description;
+        }
+
+        private void testsComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            var testsComboBox = sender as ComboBox;
+
+            List<string> data = new List<string>();
+
+            foreach (var test in tests)
+            {
+                data.Add(test.Name);
+            }
+
+            testsComboBox.ItemsSource = data;
+
+            testsComboBox.SelectedIndex = 0;
+            descriptionLabel.Content = tests[0].Description;
+        }
+
+        private void executeTestButton_Click(object sender, RoutedEventArgs e)
+        {
+            TestExecutionWindow testExecutionWindow = new TestExecutionWindow(SelectedTest);
+            testExecutionWindow.ShowDialog();
         }
     }
 }

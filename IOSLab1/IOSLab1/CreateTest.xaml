@@ -19,14 +19,14 @@
         <TextBox x:Name="dAnswerTextBox" 
                  HorizontalAlignment="Left" Height="23" Margin="53,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" IsEnabled="False"/>
         <Button x:Name="addC" Content="+" HorizontalAlignment="Left" VerticalContentAlignment="Top" Margin="408,163,0,0" VerticalAlignment="Top" 
-                Width="20" Height="23" Background="Green" FontWeight="ExtraBold"/>
+                Width="20" Height="23" Background="Green" FontWeight="ExtraBold" Click="addC_Click"/>
         <Button x:Name="addD" Content="+" HorizontalAlignment="Left" VerticalContentAlignment="Top" Margin="408,191,0,0" VerticalAlignment="Top" 
-                Width="20" Height="23" Background="Green" FontWeight="ExtraBold" IsEnabled="False"/>
+                Width="20" Height="23" Background="Green" FontWeight="ExtraBold" IsEnabled="False" Click="addD_Click"/>
         <Label Content="Questions number" HorizontalAlignment="Left" Margin="462,81,0,0" VerticalAlignment="Top"/>
         <Label x:Name="questionsNumberLabel" Content="0" HorizontalAlignment="Left" Margin="505,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Button x:Name="addQuestion" Content="Add question" HorizontalAlignment="Left" 
                 Margin="53,228,0,0" VerticalAlignment="Top" Width="80" Background="Azure" Click="addQuestion_Click"/>
         <Button x:Name="specifyRules" Content="Specify rules" HorizontalAlignment="Left" 
-                Margin="161,228,0,0" VerticalAlignment="Top" Width="80" Background="Azure" IsEnabled="False"/>
+                Margin="161,228,0,0" VerticalAlignment="Top" Width="80" Background="Azure" IsEnabled="False" Click="specifyRules_Click"/>
     </Grid>
 </Window>

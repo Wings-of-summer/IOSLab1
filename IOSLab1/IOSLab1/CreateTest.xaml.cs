@@ -88,6 +88,7 @@ namespace IOSLab1
             cAnswerTextBox.IsEnabled = false;
             dAnswerTextBox.IsEnabled = false;
 
+            addC.IsEnabled = true;
             addD.IsEnabled = false;
         }
 

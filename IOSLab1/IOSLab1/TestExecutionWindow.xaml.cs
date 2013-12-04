@@ -23,7 +23,6 @@ namespace IOSLab1
         private string answerVriant = "a";
 
         public SociologicalTest Test { get; set; }
-        public Dictionary<int, string> result = new Dictionary<int, string>();
 
         public TestExecutionWindow(SociologicalTest test)
         {
@@ -78,7 +77,7 @@ namespace IOSLab1
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
         {
-            result.Add(questionNumber, answerVriant);
+            Test.result.Add(questionNumber, answerVriant);
 
             questionNumber++;
 

@@ -87,6 +87,16 @@ namespace IOSLab1
         {
             TestExecutionWindow testExecutionWindow = new TestExecutionWindow(SelectedTest);
             testExecutionWindow.ShowDialog();
+            List<string> results = SelectedTest.GetResults();
+
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (string result in results) 
+            {
+                stringBuilder.Append(result + '\n');
+            }
+
+            resultLabel.Content = stringBuilder.ToString();
         }
     }
 }

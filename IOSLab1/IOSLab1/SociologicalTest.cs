@@ -16,6 +16,7 @@ namespace IOSLab1
         public int Number { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public Dictionary<int, string> result = new Dictionary<int, string>();
 
         public SociologicalTest(int number, string name, string description)
         {
@@ -80,6 +81,21 @@ namespace IOSLab1
                 Questions.Add(question.Number, question);
                 AddQuestionToFile(question);
             }
+        }
+
+        public List<string> GetResults() 
+        {
+            List<string> results = new List<string>();
+
+            foreach (Rule rule in rules) 
+            {
+                if (rule.ResultSubjectToRule(result)) 
+                {
+                    results.Add(rule.ThenText);
+                }
+            }
+
+            return results;
         }
 
         private void AddQuestionToFile(Question question) 

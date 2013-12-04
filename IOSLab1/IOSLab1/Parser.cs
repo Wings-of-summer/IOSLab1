@@ -45,7 +45,7 @@ namespace IOSLab1
             bool isRules = false;
 
             Dictionary<int, Dictionary<string, string>> questions = new Dictionary<int, Dictionary<string, string>>();
-            List<Dictionary<string, string>> rules = new List<Dictionary<string, string>>();
+            List<Rule> rules = new List<Rule>();
             int currentQestionNumber = 0;
 
             string name = null;
@@ -117,20 +117,21 @@ namespace IOSLab1
             return currentQestionNumber;
         }
 
-        private void AddRulesData(string line, List<Dictionary<string, string>> rules) 
+        private void AddRulesData(string line, List<Rule> rules) 
         {
             string[] splitingText = line.Split('/');
-            Dictionary<string, string> rule = new Dictionary<string, string>();
-            rule.Add(splitingText[0], splitingText[1]);
-            rule.Add(splitingText[2], splitingText[3]);
+
+            Rule rule = new Rule(splitingText[1], splitingText[3]);
 
             rules.Add(rule);
         }
 
         private SociologicalTest CreateTest(string name, string description, int number,
-            Dictionary<int, Dictionary<string, string>> questions, List<Dictionary<string, string>> rules) 
+            Dictionary<int, Dictionary<string, string>> questions, List<Rule> rules) 
         {
             SociologicalTest test = new SociologicalTest(number, name, description);
+
+            test.rules = rules;
 
             foreach (int key in questions.Keys) 
             {

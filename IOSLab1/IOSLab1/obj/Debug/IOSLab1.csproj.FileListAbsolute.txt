@@ -32,3 +32,7 @@ d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\RulesWindow.baml
 d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\RulesWindow.g.cs
 d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\TestExecutionWindow.baml
 d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\TestExecutionWindow.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\RulesWindow.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\TestExecutionWindow.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\RulesWindow.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\TestExecutionWindow.g.cs

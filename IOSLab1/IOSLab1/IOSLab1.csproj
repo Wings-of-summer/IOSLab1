@@ -53,20 +53,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateTestWindows\CreateDichotomicQuestionWindow.xaml.cs">
+      <DependentUpon>CreateDichotomicQuestionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DescriptionWindow.xaml.cs">
+      <DependentUpon>DescriptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutionTestWindows\DichotomicTestExecutionWindow.xaml.cs">
+      <DependentUpon>DichotomicTestExecutionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutionTestWindows\OpenTestExecutionWindow.xaml.cs">
+      <DependentUpon>OpenTestExecutionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HelpWindow.xaml.cs">
       <DependentUpon>HelpWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateTestWindows\CreateOpenQuestionWindow.xaml.cs">
+      <DependentUpon>CreateOpenQuestionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Parser.cs" />
-    <Compile Include="Question.cs" />
-    <Compile Include="Rule.cs" />
+    <Compile Include="TestComponent\Question.cs" />
+    <Compile Include="TestComponent\Rule.cs" />
     <Compile Include="RulesWindow.xaml.cs">
       <DependentUpon>RulesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SociologicalTest.cs" />
-    <Compile Include="TestExecutionWindow.xaml.cs">
+    <Compile Include="TestComponent\SociologicalTest.cs" />
+    <Compile Include="ExecutionTestWindows\TestExecutionWindow.xaml.cs">
       <DependentUpon>TestExecutionWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreateTestWindow.xaml">
+    <Page Include="CreateTestWindows\CreateDichotomicQuestionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateTestWindows\CreateTestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DescriptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecutionTestWindows\DichotomicTestExecutionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecutionTestWindows\OpenTestExecutionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,18 +113,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CreateTestWindow.xaml.cs">
+    <Compile Include="CreateTestWindows\CreateTestWindow.xaml.cs">
       <DependentUpon>CreateTestWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="CreateTestWindows\CreateOpenQuestionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RulesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestExecutionWindow.xaml">
+    <Page Include="ExecutionTestWindows\TestExecutionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

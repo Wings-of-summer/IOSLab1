@@ -1,0 +1,22 @@
+﻿<Window x:Class="IOSLab1.CreateOpenQuestionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create open question" Height="250" Width="580">
+    <Grid Background="AliceBlue">
+        <Label Content="Question" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+        <TextBox x:Name="questionTextBox" HorizontalAlignment="Left" Height="46" Margin="102,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450"/>
+        <Label Content="Measure" HorizontalAlignment="Left" Margin="13,78,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+        <Label Content="Example" HorizontalAlignment="Left" Margin="13,121,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+        <Label Content="Questions number" HorizontalAlignment="Left" Margin="395,80,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+        <Label x:Name="questionsNumberLabel" Content="0" HorizontalAlignment="Left" Margin="446,106,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="measureTextBox" HorizontalAlignment="Left" Height="23" Margin="102,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="exampleTextBox" HorizontalAlignment="Left" Height="23" Margin="102,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220"/>
+        <Button x:Name="addQuestion" Content="Add question" HorizontalAlignment="Left" 
+                Margin="46,175,0,0" VerticalAlignment="Top" Width="80" Background="Azure" BorderBrush="Gray" Click="addQuestion_Click"/>
+        <Button x:Name="specifyRules" Content="Specify rules" HorizontalAlignment="Left" 
+                Margin="161,175,0,0" VerticalAlignment="Top" Width="80" Background="Azure" BorderBrush="Gray" IsEnabled="False" Click="specifyRules_Click"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="322,83,0,0" VerticalAlignment="Top" Height="21" FontWeight="Bold" Foreground="Green"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="322,126,0,0" VerticalAlignment="Top" Height="21" FontWeight="Bold" Foreground="Green"/>
+        <Label Content="* - поля не обязательные для заполнения" HorizontalAlignment="Left" Margin="322,184,0,0" VerticalAlignment="Top" Foreground="DarkBlue"/>
+    </Grid>
+</Window>

@@ -47,7 +47,7 @@ namespace IOSLab1
                 finishButton.IsEnabled = true;
             }
 
-            Test.AddRule(new Rule(ifText, thenText));
+            Test.AddRule(new Rule(ifText, thenText, Test.Type));
             RestoreOriginalState();
         }
 

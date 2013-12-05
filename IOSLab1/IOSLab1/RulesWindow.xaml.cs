@@ -64,7 +64,7 @@ namespace IOSLab1
 
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
-            HelpWindow helpWindow = new HelpWindow();
+            HelpWindow helpWindow = new HelpWindow(Test.Type);
             helpWindow.ShowDialog();
         }
     }

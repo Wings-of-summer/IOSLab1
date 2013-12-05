@@ -5,13 +5,32 @@
     <Grid Background="AliceBlue">
         <Label Content="Используемые правила" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue" FontSize="13"/>
         <Button Content="CLose" HorizontalAlignment="Left" Margin="216,347,0,0" VerticalAlignment="Top" Width="75" Background="Azure" BorderBrush="Gray" Click="Button_Click"/>
-        <TabControl HorizontalAlignment="Left" Height="300" Margin="10,42,0,0" VerticalAlignment="Top" Width="482">
-            <TabItem Header="Множественный выбор">
+        <TabControl x:Name="helpTabControl" HorizontalAlignment="Left" Height="300" Margin="10,42,0,0" VerticalAlignment="Top" Width="482">
+            <TabItem TabIndex="0" Header="Дихотомический выбор">
+                    <Grid>
+                        <Rectangle Fill="White" HorizontalAlignment="Left" Height="270" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
+                        <Rectangle Fill="White" HorizontalAlignment="Left" Height="135" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                        <Rectangle Fill="White" HorizontalAlignment="Left" Height="137" Margin="0,135,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                        <Rectangle HorizontalAlignment="Left" Height="270" Margin="0,0,0,-2" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="63"/>
+                        <Label HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.192" Height="90" Width="53">
+                            <TextBlock TextWrapping="Wrap" Height="80" Width="44"><Run Text="yes&gt;n yes&lt;n yes&gt;=n yes&lt;=n yes==n"/></TextBlock>
+                        </Label>
+                        <Label HorizontalAlignment="Left" Margin="68,41,0,0" VerticalAlignment="Top">
+                            <TextBlock TextWrapping="Wrap" Height="60" Width="400"><Run Text="Где yes(no) - колличество ответов Да(Нет) на вопросы, n - заданное число ответов"/></TextBlock>
+                        </Label>
+                
+                        <Label HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.192" Height="30" Width="53">
+                            <TextBlock TextWrapping="Wrap" Height="20" Width="44"><Run Text="q==yes"/></TextBlock>
+                        </Label>
+                        <Label Content="Где q - номер вопроса, yes(no) - вариант ответа на вопрос Да(Нет)" HorizontalAlignment="Left" Margin="68,187,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+            </TabItem>
+            <TabItem TabIndex="1" Header="Множественный выбор">
                 <Grid>
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="270" Margin="10,62,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="90" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="90" Margin="0,90,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
-                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="90" Margin="0,178,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="270" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="90" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="90" Margin="0,90,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="94" Margin="0,178,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
                     <Rectangle HorizontalAlignment="Left" Height="270" Margin="0,0,0,-2" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="63"/>
                     <Label HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.192" Height="90" Width="53">
                         <TextBlock TextWrapping="Wrap" Height="80" Width="44"><Run Text="a&gt;n a&lt;n a&gt;=n a&lt;=n a==n"/></TextBlock>
@@ -29,14 +48,23 @@
                     <Label Content="Где q - номер вопроса, а - вариант ответа" HorizontalAlignment="Left" Margin="68,204,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Дихотомический выбор">
+            <TabItem TabIndex="2" Header="Открытый выбор">
                 <Grid>
-                    
-                </Grid>
-            </TabItem>
-            <TabItem Header="Открытый выбор">
-                <Grid>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="270" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="472"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="135" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                    <Rectangle Fill="White" HorizontalAlignment="Left" Height="137" Margin="0,135,0,0" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="476"/>
+                    <Rectangle HorizontalAlignment="Left" Height="270" Margin="0,0,0,-2" Stroke="AntiqueWhite" VerticalAlignment="Top" Width="63"/>
+                    <Label HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.192" Height="90" Width="53">
+                        <TextBlock TextWrapping="Wrap" Height="80" Width="44"><Run Text="q&gt;n q&lt;n q&gt;=n q&lt;=n q==n"/></TextBlock>
+                    </Label>
+                    <Label HorizontalAlignment="Left" Margin="68,41,0,0" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Height="60" Width="400"><Run Text="Где q - номер вопроса, n - заданное числовое значение"/></TextBlock>
+                    </Label>
 
+                    <Label HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.192" Height="30" Width="53">
+                        <TextBlock TextWrapping="Wrap" Height="20" Width="44"><Run Text="q==s"/></TextBlock>
+                    </Label>
+                    <Label Content="Где q - номер вопроса, s - символьное значение" HorizontalAlignment="Left" Margin="68,187,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
         </TabControl>

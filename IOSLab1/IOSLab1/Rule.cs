@@ -16,16 +16,19 @@ namespace IOSLab1
 
         public String IfText { get; set; }
         public String ThenText { get; set; }
+        public int TestType { get; set; }
 
-        public Rule(String ifText, String thenText) 
+        public Rule(String ifText, String thenText, int testType) 
         {
             IfText = ifText;
             ThenText = thenText;
+            TestType = testType;
             ParseIfText();
         }
 
         private void ParseIfText() 
         {
+            if()
             SetFirstValue();
             SetConditionValue();
             SetSecondValue();

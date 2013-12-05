@@ -31,10 +31,14 @@
                     <Label Content="Tests" HorizontalAlignment="Left" Margin="26,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
                     <ComboBox x:Name="testsComboBox" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" 
                               Width="220" Loaded="testsComboBox_Loaded" SelectionChanged="testsComboBox_SelectionChanged"/>
-                    <Label Content="Description" HorizontalAlignment="Left" Margin="303,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
-                    <Label x:Name="descriptionLabel" Content="" HorizontalAlignment="Left" Margin="303,50,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="263,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+                    <Label HorizontalAlignment="Left" Margin="263,50,0,0" VerticalAlignment="Top">
+                        <TextBlock TextWrapping="Wrap" Height="30" Width="300"><Run x:Name="descriptionLabel" Text=""/></TextBlock>
+                    </Label>
                     <Button x:Name="executeTestButton" Content="Execute test" HorizontalAlignment="Left" Background="Azure" BorderBrush="Gray"
                             Margin="248,189,0,0" VerticalAlignment="Top" Width="75" Click="executeTestButton_Click"/>
+                    <Label Content="Test type" HorizontalAlignment="Left" Margin="263,95,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+                    <Label x:Name="viewTestTypeLabel" Content="" HorizontalAlignment="Left" Margin="263,126,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="resultTab" Header="Results" Margin="-2,-2,-2,-1">

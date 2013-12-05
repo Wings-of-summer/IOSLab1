@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\
+d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\
 IOSLab1
 none
 false
 DEBUG;TRACE
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\App.xaml
+d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\App.xaml
 10-1336718528
 
-22-1095344543
+22-1856929275
 12-1401562060
 CreateTestWindows\CreateDichotomicQuestionWindow.xaml;CreateTestWindows\CreateTestWindow.xaml;DescriptionWindow.xaml;ExecutionTestWindows\DichotomicTestExecutionWindow.xaml;ExecutionTestWindows\OpenTestExecutionWindow.xaml;HelpWindow.xaml;MainWindow.xaml;CreateTestWindows\CreateOpenQuestionWindow.xaml;RulesWindow.xaml;ExecutionTestWindows\TestExecutionWindow.xaml;
 

@@ -37,6 +37,8 @@ namespace IOSLab1.ExecutionTestWindows
             Question question = Test.Questions[questionNumber];
 
             questionLabel.Text = question.QuestionText;
+
+            yes.IsChecked = true;
         }
 
         private void nextButton_Click(object sender, RoutedEventArgs e)

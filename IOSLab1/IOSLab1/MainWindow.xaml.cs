@@ -22,10 +22,6 @@ namespace IOSLab1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int DICHOTOMIC_TEST_TYPE = 1;
-        private const int MULT_TEST_TYPE = 2;
-        private const int OPEN_TEST_TYPE = 3;
-
         private List<SociologicalTest> tests = new List<SociologicalTest>();
         private Dictionary<int, List<string>> testTypes = new Dictionary<int, List<string>>();
         private SociologicalTest SelectedTest;
@@ -54,11 +50,11 @@ namespace IOSLab1
 
             Window createTestWindow = null;
 
-            if (testType == MULT_TEST_TYPE) 
+            if (testType == SociologicalTest.MULT_TEST_TYPE) 
             {
                 createTestWindow = new CreateTest(sociologicalTest);
             }
-            else if (testType == DICHOTOMIC_TEST_TYPE)
+            else if (testType == SociologicalTest.DICHOTOMIC_TEST_TYPE)
             {
                 createTestWindow = new CreateDichotomicQuestionWindow(sociologicalTest);
             }
@@ -87,7 +83,8 @@ namespace IOSLab1
             string value = comboBox.SelectedItem as string;
 
             SelectedTest = tests.FirstOrDefault(t => t.Name.Equals(value));
-            descriptionLabel.Content = SelectedTest.Description;
+            descriptionLabel.Text = SelectedTest.Description;
+            viewTestTypeLabel.Content = testTypes[SelectedTest.Type][0];
         }
 
         private void testsComboBox_Loaded(object sender, RoutedEventArgs e)
@@ -104,20 +101,21 @@ namespace IOSLab1
             testsComboBox.ItemsSource = data;
 
             testsComboBox.SelectedIndex = 0;
-            descriptionLabel.Content = tests[0].Description;
+            descriptionLabel.Text = tests[0].Description;
+            viewTestTypeLabel.Content = testTypes[tests[0].Type][0];
         }
 
         private void executeTestButton_Click(object sender, RoutedEventArgs e)
         {
             Window testExecutionWindow = null;
 
-            if (SelectedTest.Type == MULT_TEST_TYPE)
+            if (SelectedTest.Type == SociologicalTest.MULT_TEST_TYPE)
             {
                 testExecutionWindow = new TestExecutionWindow(SelectedTest);
             }
-            else if (SelectedTest.Type == DICHOTOMIC_TEST_TYPE)
+            else if (SelectedTest.Type == SociologicalTest.DICHOTOMIC_TEST_TYPE)
             {
-                testExecutionWindow = new TestExecutionWindow(SelectedTest);
+                testExecutionWindow = new DichotomicTestExecutionWindow(SelectedTest);
             }
             else
             {
@@ -126,16 +124,16 @@ namespace IOSLab1
 
             testExecutionWindow.ShowDialog();
 
-            //List<string> results = SelectedTest.GetResults();
+            List<string> results = SelectedTest.GetResults();
 
-            //StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new StringBuilder();
 
-            //foreach (string result in results) 
-            //{
-            //    stringBuilder.Append(result + '\n');
-            //}
+            foreach (string result in results)
+            {
+                stringBuilder.Append(result + '\n');
+            }
 
-            //resultLabel.Content = stringBuilder.ToString();
+            resultLabel.Content = stringBuilder.ToString();
         }
 
         private void testTypesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

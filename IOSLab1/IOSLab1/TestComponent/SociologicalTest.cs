@@ -9,6 +9,10 @@ namespace IOSLab1
 {
     public class SociologicalTest
     {
+        public const int DICHOTOMIC_TEST_TYPE = 1;
+        public const int MULT_TEST_TYPE = 2;
+        public const int OPEN_TEST_TYPE = 3;
+
         public Dictionary<int, Question> Questions = new Dictionary<int, Question>();
         public FileInfo TestFile { get; set; }
         public static string parentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + @"\Sociological tests\";
@@ -93,7 +97,11 @@ namespace IOSLab1
 
             foreach (Rule rule in rules) 
             {
-                if (rule.ResultSubjectToRule(result)) 
+                if ((rule.Type == MULT_TEST_TYPE || rule.Type ==DICHOTOMIC_TEST_TYPE) && rule.ResultSubjectToRule(result)) 
+                {
+                    results.Add(rule.ThenText);
+                }
+                else if (rule.Type == OPEN_TEST_TYPE && rule.ResultSubjectForOpenRule(result)) 
                 {
                     results.Add(rule.ThenText);
                 }

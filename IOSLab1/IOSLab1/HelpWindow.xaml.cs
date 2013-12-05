@@ -19,10 +19,11 @@ namespace IOSLab1
     /// </summary>
     public partial class HelpWindow : Window
     {
-        public HelpWindow()
+        public HelpWindow(int selectedTab)
         {
             InitializeComponent();
             this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            helpTabControl.SelectedIndex = selectedTab - 1;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

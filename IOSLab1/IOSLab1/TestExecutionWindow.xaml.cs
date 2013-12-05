@@ -28,6 +28,7 @@ namespace IOSLab1
         {
             Test = test;
             InitializeComponent();
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitQuestion();
         }
 

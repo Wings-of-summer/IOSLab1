@@ -29,6 +29,7 @@ namespace IOSLab1
             Parser parser = new Parser();
             tests = parser.GetTests();
             InitializeComponent();
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void createTest_Click(object sender, RoutedEventArgs e)

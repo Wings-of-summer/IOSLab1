@@ -5,27 +5,32 @@
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="592">
             <TabItem Header="Create test">
-                <Grid Background="WhiteSmoke">
-                    <Label Content="Name" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="testName" HorizontalAlignment="Left" Height="23" Margin="100,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
-                    <Label Content="Description" HorizontalAlignment="Left" Margin="25,74,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="testDescription" HorizontalAlignment="Left" Height="46" Margin="100,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450"/>
-                    <Button x:Name="createTest" Content="Create" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="75" Background="Azure" Click="createTest_Click"/>
+                <Grid Background="AliceBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="242*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+                    <TextBox x:Name="testName" HorizontalAlignment="Left" Height="23" Margin="25,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="2"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="25,96,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
+                    <TextBox x:Name="testDescription" HorizontalAlignment="Left" Height="46" Margin="25,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450" Grid.ColumnSpan="2"/>
+                    <Button x:Name="createTest" Content="Create" HorizontalAlignment="Left" Margin="160,194,0,0" VerticalAlignment="Top" Width="75" Background="Azure" BorderBrush="Gray" Click="createTest_Click" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="View tests">
-                <Grid Background="WhiteSmoke">
-                    <Label Content="Tests" HorizontalAlignment="Left" Margin="26,19,0,0" VerticalAlignment="Top"/>
+                <Grid Background="AliceBlue">
+                    <Label Content="Tests" HorizontalAlignment="Left" Margin="26,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
                     <ComboBox x:Name="testsComboBox" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" 
                               Width="220" Loaded="testsComboBox_Loaded" SelectionChanged="testsComboBox_SelectionChanged"/>
-                    <Label Content="Description" HorizontalAlignment="Left" Margin="303,19,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="303,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
                     <Label x:Name="descriptionLabel" Content="" HorizontalAlignment="Left" Margin="303,50,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="executeTestButton" Content="Execute test" HorizontalAlignment="Left" Margin="26,136,0,0" VerticalAlignment="Top" Width="75" Click="executeTestButton_Click"/>
+                    <Button x:Name="executeTestButton" Content="Execute test" HorizontalAlignment="Left" Background="Azure" BorderBrush="Gray"
+                            Margin="248,189,0,0" VerticalAlignment="Top" Width="75" Click="executeTestButton_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="resultTab" Header="Results" Margin="-2,-2,-2,-1">
-                <Grid Background="WhiteSmoke">
-                    <Label Content="Results:" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top"/>
+                <Grid Background="AliceBlue">
+                    <Label Content="Results:" HorizontalAlignment="Left" Margin="19,20,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkBlue"/>
                     <Label x:Name="resultLabel" Content="" HorizontalAlignment="Left" Margin="19,51,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>

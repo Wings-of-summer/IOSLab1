@@ -26,6 +26,7 @@ namespace IOSLab1
         {
             Test = test;
             InitializeComponent();
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void addRuleButton_Click(object sender, RoutedEventArgs e)
@@ -59,6 +60,12 @@ namespace IOSLab1
         private void finishButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.ShowDialog();
         }
     }
 }

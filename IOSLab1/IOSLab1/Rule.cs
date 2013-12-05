@@ -83,7 +83,7 @@ namespace IOSLab1
             }
             else if (isFirstLetter && !isSecondLetter) 
             {
-                int firstNumber = result.Select(r => r.Value.Equals(firstValue)).ToList().Count;
+                int firstNumber = result.Count(r => r.Value.Equals(firstValue));
                 int secondNumber = Int32.Parse(secondValue);
                 return CompareValue(firstNumber, secondNumber);
             }

@@ -26,6 +26,7 @@ namespace IOSLab1
         public CreateTest()
         {
             InitializeComponent();
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         public CreateTest(SociologicalTest test)

@@ -1,8 +1,6 @@
 C:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\bin\Debug\IOSLab1.exe.config
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1.csprojResolveAssemblyReference.cache
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTest.baml
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\MainWindow.baml
-c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTest.g.cs
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\MainWindow.g.cs
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\App.g.cs
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\IOSLab1_MarkupCompile.cache
@@ -36,3 +34,7 @@ c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\RulesWindow.g.cs
 c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\TestExecutionWindow.g.cs
 d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTestWindow.baml
 d:\University\C#Projects\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTestWindow.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTestWindow.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\HelpWindow.baml
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\CreateTestWindow.g.cs
+c:\Asya\Labs\IOSLab1\IOSLab1\IOSLab1\obj\Debug\HelpWindow.g.cs
